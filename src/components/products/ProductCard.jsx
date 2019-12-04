@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import MyCarousel from "./Carousel"
 import {connect} from "react-redux"
+import {addToCart} from "../../actions/productsActions"
 
 const ProductCard = ({product, addToCart}) =>{
 

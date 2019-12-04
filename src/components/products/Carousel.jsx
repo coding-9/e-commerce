@@ -45,7 +45,7 @@ function MyCarousel() {
         <div className="carouselDiv">
           <img
             className="d-block carouselImg"
-            src={require("../../assets/images/Tshirt1.jpg")}
+            src={require("../../images/Tshirt1.jpg")}
             alt="First slide"
           />
         </div>
@@ -54,7 +54,7 @@ function MyCarousel() {
         <div className="carouselDiv">
           <img
             className="d-block carouselImg"
-            src={require("../../assets/images/Tshirt2.jpg")} 
+            src={require("../../images/Tshirt2.jpg")} 
             alt="Second slide"
           />
         </div>
@@ -63,7 +63,7 @@ function MyCarousel() {
         <div className="carouselDiv">
           <img
             className="d-block carouselImg"
-            src={require("../../assets/images/Tshirt3.jpg")} 
+            src={require("../../images/Tshirt3.jpg")} 
             alt="Third slide"
           />
         </div>
