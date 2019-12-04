@@ -7,7 +7,7 @@ import {
   
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
-import Products from '..pages/ProductsPage'
+import Products from '../pages/ProductsPage'
   export default function Navbar() {
 
     return (
@@ -65,7 +65,7 @@ import Products from '..pages/ProductsPage'
                 <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>
             <Switch>
             <Route path="/profil">
-            <Profil />
+            <UserProfil />
           </Route>
           <Route path="/product">
             <Products />

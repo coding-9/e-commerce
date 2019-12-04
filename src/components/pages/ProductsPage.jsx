@@ -1,12 +1,13 @@
-import React from 'react'
 import ProductList from "../products/ProductList"
+import React from 'react'
 
-function ProductsPage() {
+const ProductsPage = () => {
     return (
         <div>
-            <ProductList />
+            
         </div>
     )
 }
+
 
 export default ProductsPage
