@@ -5,11 +5,10 @@ import {
     Route,
     NavLink
   } from "react-router-dom";
-import '../App.css'
-import Logo from '../img/logo.png'
-import Home from './Home'
-import UserProfil from './UsersRegister'
-import Products from './Products'
+import '../../App.css'
+import Home from '../Home/Page/HomePage'
+import Profil from '../Profil/Page/ProfilPage'
+import Products from '../Profil/Page/ProducsPage'
   export default function Navbar() {
 
     return (
@@ -17,9 +16,9 @@ import Products from './Products'
         <div class="navbar">
             <NavLink activeClassName="activeNavLink" to="/">Home</NavLink>
             <div class="dropdown">
-                <NavLink to="/product" class="dropbtn">Men
+                <button to="/product" class="dropbtn">Men
                     <i class="fa fa-caret-down"></i>
-                </NavLink>
+                </button>
                 <div class="dropdown-content">
                     <div class=" dropdown-content row">
                         <div class="column">
@@ -64,10 +63,10 @@ import Products from './Products'
                     </div>
                 </div>
             </div> 
-                  <NavLink activeClassName="activeNavLink" to="/userprofil">User Profil</NavLink>
+                <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>
             <Switch>
-          <Route path="/userprofil">
-            <UserProfil />
+            <Route path="/profil">
+            <Profil />
           </Route>
           <Route path="/product">
             <Products />
