@@ -1,3 +1,4 @@
+import ProductList from "../products/ProductList"
 import React from 'react'
 
 const ProductsPage = () => {
