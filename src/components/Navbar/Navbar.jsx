@@ -1,17 +1,17 @@
 import React  from 'react'
-import {
-    BrowserRouter as Router,
+import {    
     Switch,
     Route,
     NavLink
   } from "react-router-dom";
+  
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
-import Products from './Products'
+import Products from '..pages/ProductsPage'
   export default function Navbar() {
 
     return (
-        <Router>
+        
         <div class="navbar">
             <NavLink activeClassName="activeNavLink" to="/">Home</NavLink>
             <div class="dropdown">
@@ -75,7 +75,7 @@ import Products from './Products'
           </Route>
         </Switch>
         </div>
-        </Router>
+        
             
     )
                         
