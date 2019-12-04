@@ -1,49 +1,55 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import MyCarousel from "./Carousel"
+import {connect} from "react-redux"
 
-const ProductCard = (props) =>{
-    const [product,setProduct] = useState([])
-    
-    const getProducts = async () => {
-        await setProduct(props.product)
+const ProductCard = ({product, addToCart}) =>{
+
+    const [currentColor, setColor] = useState("")
+
+    const [currentSize, setSize] = useState({})
+
+    const handleColor = (color) => {
+        setColor(color)
+        console.log(currentColor)
     }
 
-    const handleClick = () => {
-        getProducts()
+    const handleSize = (elem) => {
+        setSize(elem)
+        console.log(currentSize)
+    }
+
+    const handleCart = () => {
+        product.color = currentColor
+        product.size = currentSize.size
+        product.id = currentSize.id
         console.log(product)
+       addToCart(product)
     }
 
     return (
         <div className="px-5 py-3">
             <div className="productCard">
-                <MyCarousel number={props.number} /> 
+                <MyCarousel /> 
                 <div className="productInfos">  
                     <h6 className="ml-2 mt-2 font-weight-light">{product.name}</h6> 
-                    <p className="ml-2 font-weight-bold productPrice">*Price*</p>
+                    <p className="ml-2 font-weight-bold productPrice">{product.price}</p>
                     <form action="" method="post">
                         <ul className="colorList list-unstyled d-flex flex-row justify-content-left">
-                            <li>
-                                <div onClick={handleClick} className="rounded-circle bg-warning p-2 border border-dark m-2 d-inline-block"></div>
+                            {Object.keys(product.color).map((color)=>{
+                                return <li className={"product"+color}>
+                                <div onClick={()=> {handleColor(color)}}className="rounded-circle p-2 border border-dark m-2 d-inline-block"></div>
                             </li>
-                            <li>
-                                <div className="rounded-circle bg-danger p-2 border border-dark m-2 d-inline-block"></div>
-                            </li>
-                            <li>
-                                <div className="rounded-circle bg-success p-2 border border-dark m-2 d-inline-block"></div>
-                            </li>
+                            })}
                         </ul>
                         <ul className="sizeList list-unstyled d-flex flex-row justify-content-left">
-                            <li className="border border-dark m-2 sizeElem">XS</li>
-                            <li className="border border-dark m-2 sizeElem">S</li>
-                            <li className="border border-dark m-2 sizeElem">M</li>
-                            <li className="border border-dark m-2 sizeElem">L</li>
-                            <li className="border border-dark m-2 sizeElem">XL</li>
+                            {currentColor && product.color[currentColor].map((elem)=> {
+                                return <li onClick={()=> {handleSize(elem)}} className="border border-dark m-2 sizeElem">{elem.size}</li>
+                            })}
                         </ul>
                         <div className="row">
                             <div className="productAdd border border-dark col-7 offset-1 d-flex justify-content-around">
-                                <span className="d-none span1">ADD TO CART</span>
                                 <span><i class="fas fa-shopping-bag"></i></span>
-                                <span className="span2">ADD TO CART</span>
+                                <span onClick={()=> {handleCart()}} className="span2">ADD TO CART</span>
                             </div>
                         </div>
                         <div className="p-2">
@@ -59,4 +65,13 @@ const ProductCard = (props) =>{
         </div>        
     )
 }
-export default ProductCard
+
+const mapStateToProps = state=>{
+    return {state}
+}
+
+const mapActionsToProps={
+    addToCart : addToCart
+  }
+
+export default connect (mapStateToProps,mapActionsToProps)(ProductCard)
