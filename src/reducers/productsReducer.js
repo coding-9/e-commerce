@@ -20,3 +20,5 @@ const cart = (state=[],{type, payload}) => {
             return state
     }
 }
+
+export default cart 
