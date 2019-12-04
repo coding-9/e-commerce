@@ -5,10 +5,9 @@ import {
     Route,
     NavLink
   } from "react-router-dom";
-import '../../App.css'
-import Home from '../Home/Page/HomePage'
-import Profil from '../Profil/Page/ProfilPage'
-import Products from '../Profil/Page/ProducsPage'
+import Home from '../pages/HomePage'
+import UserProfil from '../pages/ProfilPage'
+import Products from './Products'
   export default function Navbar() {
 
     return (
@@ -24,7 +23,7 @@ import Products from '../Profil/Page/ProducsPage'
                         <div class="column">
                             <h3>Vêtements</h3>
                             <NavLink activeClassName="activeNavLink" to="/product/pull">Pulls & Sweats</NavLink>
-                            <NavLink activeClassName="activeNavLink" to="/product/blouson">Bloousons & Manteaux</NavLink>
+                            <NavLink activeClassName="activeNavLink" to="/product/blouson">Blousons & Manteaux</NavLink>
                             <NavLink activeClassName="activeNavLink" to="/product/jeans">Jeans</NavLink>
                             <NavLink activeClassName="activeNavLink" to="/product/pantalon">Pantalon & Bermudas</NavLink>
                             <NavLink activeClassName="activeNavLink" to="/product/chemise">Chemises</NavLink>
