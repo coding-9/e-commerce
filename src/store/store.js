@@ -1,10 +1,11 @@
 import {createStore, applyMiddleware} from 'redux';
-import reducer from '../reducer/reducer';
+import reducer from '../reducers/productsReducer';
 import logger from 'redux-logger';
 
 const store = createStore(
     reducer,
-    applyMiddleware(logger)
+    applyMiddleware(logger),
+    
 );
 
 export default store;
