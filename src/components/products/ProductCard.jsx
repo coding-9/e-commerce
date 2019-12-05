@@ -18,10 +18,11 @@ const ProductCard = ({product, addToCart}) =>{
     }
 
     const handleCart = () => {
-        product.color = currentColor
-        product.size = currentSize.size
-        product.id = currentSize.id
-       addToCart(product)
+        let cartProduct = product
+        cartProduct.color = currentColor
+        cartProduct.size = currentSize.size
+        cartProduct.id = currentSize.id
+       addToCart(cartProduct)
     }
 
     return (

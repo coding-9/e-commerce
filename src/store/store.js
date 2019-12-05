@@ -14,7 +14,7 @@ const persistedReducer = persistReducer(persistConfig, cart)
 
 let store = createStore(
     persistedReducer,
-    applyMiddleware(logger)
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     
 );
 let persistor = persistStore(store)
