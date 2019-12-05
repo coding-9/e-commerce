@@ -5,7 +5,7 @@ import {addToCart} from "../../actions/productsActions"
 
 const ProductCard = ({product, addToCart}) =>{
 
-    const [currentColor, setColor] = useState("")
+    const [currentColor, setColor] = useState()
 
     const [currentSize, setSize] = useState({})
 
@@ -18,11 +18,11 @@ const ProductCard = ({product, addToCart}) =>{
     }
 
     const handleCart = () => {
-        let cartProduct = product
+        let cartProduct = {...product}
         cartProduct.color = currentColor
         cartProduct.size = currentSize.size
         cartProduct.id = currentSize.id
-       addToCart(cartProduct)
+       addToCart(cartProduct) 
     }
 
     return (
@@ -36,13 +36,13 @@ const ProductCard = ({product, addToCart}) =>{
                         <ul className="colorList list-unstyled d-flex flex-row justify-content-left">
                             {Object.keys(product.color).map((color)=>{
                                 return <li className={"product"+color}>
-                                <div onClick={()=> {handleColor(color)}}className="rounded-circle p-2 border border-dark m-2 d-inline-block"></div>
+                                <div onClick={()=> {handleColor(color)}}className="selectColor rounded-circle p-2 border border-dark m-2 d-inline-block"></div>
                             </li>
                             })}
                         </ul>
                         <ul className="sizeList list-unstyled d-flex flex-row justify-content-left">
                             {currentColor && product.color[currentColor].map((elem)=> {
-                                return <li onClick={(e)=> {handleSize(e, elem)}} className="border border-dark m-2 sizeElem">{elem.size}</li>
+                                return <li onClick={(e)=> {handleSize(e, elem)}} className="rounded border border-dark sizeElem m-2"><a className="btn p-0">{elem.size}</a></li>
                             })}
                         </ul>
                         <div className="row">

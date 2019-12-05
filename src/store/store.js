@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware} from 'redux';
-import cart from '../reducers/productsReducer';
+import reducer from '../reducers/reducer';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import logger from 'redux-logger';
@@ -9,7 +9,7 @@ const persistConfig = {
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, cart)
+const persistedReducer = persistReducer(persistConfig, reducer)
 
 
 let store = createStore(
