@@ -30,7 +30,7 @@ export const CartProduct = ({
     }
     return(
         <div className="w-100">
-            <div className="d-flex justify-content-end price">{(product.prize*product.quantity)}€</div>
+            <div className="d-flex justify-content-end price">{(product.price*product.quantity)}€</div>
             <div className="row">
                 <div className="col-2 d-flex justify-content-center">
                     <img src={photo} alt=""/>
@@ -38,7 +38,7 @@ export const CartProduct = ({
                 <div className="col-7">
                     <div className="d-flex flex-column justify-content-center h-100">
                         <a href="#">{product.name}</a>
-                        <span>Taille: {product.sizes[0]}</span>
+                        <span>Taille: {product.size}</span>
                     </div>
                 </div>
                 <div className="col-2 d-flex align-items-center">

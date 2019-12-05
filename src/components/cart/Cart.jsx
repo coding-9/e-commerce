@@ -19,8 +19,8 @@ const Cart = ({cart}) => {
                 pending? (
                     <div>
 
-                        <h1>{cart.reduce((prize=0, product)=>{
-                            return prize + product.prize*product.quantity
+                        <h1>{cart.reduce((price=0, product)=>{
+                            return price + product.price*product.quantity
                             },0).toFixed(2)}
                         </h1> 
                         <div className="row">
