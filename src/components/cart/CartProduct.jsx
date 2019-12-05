@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import photo from '../../images/Tshirt1.jpg'
-// import '../css/cart.css'
+import '../../css/cart.css'
 import {
     addToCart,
     removeFromCart,

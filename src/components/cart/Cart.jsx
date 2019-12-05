@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import CartProduct from './CartProduct'
+import "../../css/cart.css"
 
 
 const Cart = ({cart}) => {
