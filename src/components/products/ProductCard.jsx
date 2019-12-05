@@ -5,9 +5,10 @@ import {addToCart} from "../../actions/productsActions"
 
 const ProductCard = ({product, addToCart}) =>{
 
-    const [currentColor, setColor] = useState()
 
-    const [currentSize, setSize] = useState({})
+    const [currentColor, setColor] = useState(Object.keys(product.color)[0])
+
+    const [currentSize, setSize] = useState(product.color[Object.keys(product.color)[0]][0])
 
     const handleColor = (color) => {
         setColor(color)
@@ -22,7 +23,9 @@ const ProductCard = ({product, addToCart}) =>{
         cartProduct.color = currentColor
         cartProduct.size = currentSize.size
         cartProduct.id = currentSize.id
-       addToCart(cartProduct) 
+       if(cartProduct.id && cartProduct.size && cartProduct.color){
+        addToCart(cartProduct) 
+       }
     }
 
     return (
