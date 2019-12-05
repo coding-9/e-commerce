@@ -37,7 +37,9 @@ export const CartProduct = ({
                 <div className="col-7">
                     <div className="d-flex flex-column justify-content-center h-100">
                         <a className="cart-link" href="#">{product.name}</a>
-                        <span>Taille: {product.size}</span>
+                        <p>                        
+                            <span>Size: {product.size} </span><span> Color: {product.color}</span>
+                        </p>
                     </div>
                 </div>
                 <div className="col-2 d-flex align-items-center">

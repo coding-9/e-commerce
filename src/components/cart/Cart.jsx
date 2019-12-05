@@ -22,7 +22,7 @@ const Cart = ({cart}) => {
 
                         <h1>{cart.reduce((price=0, product)=>{
                             return price + product.price*product.quantity
-                            },0).toFixed(2)}
+                            },0)}€
                         </h1> 
                         <div className="row">
                             <div className="col-8">
