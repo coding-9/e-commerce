@@ -25,7 +25,7 @@ const Cart = ({cart}) => {
                         </h1> 
                         <div className="row">
                             <div className="col-8">
-                                <ul className="mr-2 p-0">
+                                <ul className="mr-2 p-0 cart-list">
                                     {cart.map(product => {
                                         return (
                                             <li key={product.id}>

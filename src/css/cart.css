@@ -1,0 +1,40 @@
+.product-img{
+    width: 55px;
+    height: auto;
+    max-width: 100%;
+}
+.cart-list{
+    list-style: none;
+}
+.cartBox{
+    border: solid 0.5px rgba(128, 128, 128, 0.4);
+    height: auto;
+    width: 70px;
+}
+.cart-btn{
+    font-size: small;
+    background-color: white;
+    outline: none;
+}
+
+.quantity{
+    font-size:small ;
+}
+.bin{
+    height: 50px;
+    width: 30px;
+    padding: 0;
+    opacity: 0.4;
+}
+.cart-link{
+    color: black;
+}
+.cart-link:hover{
+    color:grey;
+}
+.price{
+    font-size: 14px;
+    font-weight: 600;
+    color: #042b35;
+    white-space: nowrap
+}
