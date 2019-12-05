@@ -62,7 +62,7 @@ import Products from '../pages/ProductsPage'
                     </div>
                 </div>
             </div> 
-                <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>
+                <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
             <Switch>
             <Route path="/profil">
             <UserProfil />
