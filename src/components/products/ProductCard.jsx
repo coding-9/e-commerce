@@ -4,7 +4,6 @@ import {connect} from "react-redux"
 import {addToCart} from "../../actions/productsActions"
 
 const ProductCard = ({product, addToCart}) =>{
-    console.log(product)
 
     const [currentColor, setColor] = useState("")
 
@@ -14,7 +13,7 @@ const ProductCard = ({product, addToCart}) =>{
         setColor(color)
     }
 
-    const handleSize = (elem) => {
+    const handleSize = (e, elem) => {
         setSize(elem)
     }
 
@@ -42,7 +41,7 @@ const ProductCard = ({product, addToCart}) =>{
                         </ul>
                         <ul className="sizeList list-unstyled d-flex flex-row justify-content-left">
                             {currentColor && product.color[currentColor].map((elem)=> {
-                                return <li onClick={()=> {handleSize(elem)}} className="border border-dark m-2 sizeElem">{elem.size}</li>
+                                return <li onClick={(e)=> {handleSize(e, elem)}} className="border border-dark m-2 sizeElem">{elem.size}</li>
                             })}
                         </ul>
                         <div className="row">
