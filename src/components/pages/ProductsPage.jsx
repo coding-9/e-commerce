@@ -24,12 +24,12 @@ const ProductsPage =() => {
             <div className="row">
                 <div className="col-2">
                     <ul className="list-unstyled">
-                        <li className="p-2"><button className="btn btn-danger text-white" value="shirt" onClick={(e)=>{getCategory(e)}}>Shirts</button></li>
-                        <li className="p-2"><button className="btn btn-danger text-white" value="jeans" onClick={(e)=>{getCategory(e)}}>Jeans</button></li>
-                        <li className="p-2"><button className="btn btn-danger text-white" value="t-shirt" onClick={(e)=>{getCategory(e)}}>T-shirts</button></li>
-                        <li className="p-2"><button className="btn btn-danger text-white" value="pull" onClick={(e)=>{getCategory(e)}}>Pulls</button></li>
-                        <li className="p-2"><button className="btn btn-danger text-white" value="veste" onClick={(e)=>{getCategory(e)}}>Vestes</button></li>
-                        <li className="p-2"><button className="btn btn-danger text-white" value="chaussure" onClick={(e)=>{getCategory(e)}}>Chaussures</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="shirt" onClick={(e)=>{getCategory(e)}}>Shirts</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="jeans" onClick={(e)=>{getCategory(e)}}>Jeans</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="t-shirt" onClick={(e)=>{getCategory(e)}}>T-shirts</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="pull" onClick={(e)=>{getCategory(e)}}>Pulls</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="veste" onClick={(e)=>{getCategory(e)}}>Vestes</button></li>
+                        <li className="p-2 btnCategory"><button className="btn bg-white border-none btn-outline-light text-dark" value="chaussure" onClick={(e)=>{getCategory(e)}}>Chaussures</button></li>
                     </ul>
                     <ul className="py-3 list-unstyled">
                         <li className="p-2"><button onClick={(e)=>{getCollection(e)}} value="spring" className="btn btn-primary text-white">Spring</button></li>
