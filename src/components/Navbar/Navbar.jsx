@@ -8,7 +8,7 @@ import '../../css/navBar.css'
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
 import Products from '../pages/ProductsPage'
-import Cart from '../cart/CartPage'
+import Cart from '../pages/CartPage'
   export default function Navbar() {
 
     return (
@@ -63,7 +63,7 @@ import Cart from '../cart/CartPage'
                     </div>
                 </div>
             </div>
-            <NavLink activeClassName="activeNavLink" to="/cart">Home</NavLink>
+            <NavLink activeClassName="activeNavLink" to="/cart">Cart</NavLink>
             
             <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
             <Switch>
