@@ -12,7 +12,7 @@ const ProductList = () =>{
     }
 
     return(
-        <div className="container">
+        <div>
             <button onClick={getProducts}>ICI</button>
                 <ul className="list-unstyled productList row">
                 {products.map((product) => {
