@@ -4,6 +4,7 @@ import {connect} from "react-redux"
 import {addToCart} from "../../actions/productsActions"
 
 const ProductCard = ({product, addToCart}) =>{
+    console.log(product)
 
     const [currentColor, setColor] = useState("")
 
@@ -11,19 +12,16 @@ const ProductCard = ({product, addToCart}) =>{
 
     const handleColor = (color) => {
         setColor(color)
-        console.log(currentColor)
     }
 
     const handleSize = (elem) => {
         setSize(elem)
-        console.log(currentSize)
     }
 
     const handleCart = () => {
         product.color = currentColor
         product.size = currentSize.size
         product.id = currentSize.id
-        console.log(product)
        addToCart(product)
     }
 

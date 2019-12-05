@@ -8,18 +8,19 @@ import '../../css/navBar.css'
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
 import Products from '../pages/ProductsPage'
+import Cart from '../cart/CartPage'
   export default function Navbar() {
 
     return (
         
-        <div class="navbar">
+        <div class="navigation">
             <NavLink activeClassName="activeNavLink" to="/">Home</NavLink>
-            <div class="dropdown">
+            <div class="drop">
                 <button to="/product" class="dropbtn">Men
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <div class=" dropdown-content row">
+                <div class="drop-content">
+                    <div class=" drop-content rows">
                         <div class="column">
                             <h3>Vêtements</h3>
                             <NavLink activeClassName="activeNavLink" to="/product/pull">Pulls & Sweats</NavLink>
@@ -38,12 +39,12 @@ import Products from '../pages/ProductsPage'
                     </div>
                 </div>
             </div> 
-            <div class="dropdown">
+            <div class="drop">
                 <button class="dropbtn">Women
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <div class=" dropdown-content row">
+                <div class="drop-content">
+                    <div class=" drop-content rows">
                         <div class="column">
                             <h3>Vêtements</h3>
                             <NavLink activeClassName="activeNavLink" to="/product/pull">Pulls & Sweats</NavLink>
@@ -61,14 +62,19 @@ import Products from '../pages/ProductsPage'
                         </div>
                     </div>
                 </div>
-            </div> 
-                <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
+            </div>
+            <NavLink activeClassName="activeNavLink" to="/cart">Home</NavLink>
+            
+            <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
             <Switch>
             <Route path="/profil">
             <UserProfil />
           </Route>
           <Route path="/product">
             <Products />
+          </Route>
+          <Route path="/cart">
+            <Cart/>
           </Route>
           <Route exact path="/">
             <Home />
