@@ -2,15 +2,15 @@ import React  from 'react'
 import {    
     Switch,
     Route,
-    NavLink
+    NavLink,
   } from "react-router-dom";
 import '../../css/navBar.css'
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
 import Products from '../pages/ProductsPage'
 import Cart from '../pages/CartPage'
+import LoginPage from '../pages/LoginPage'
   export default function Navbar() {
-
     return (
         <div className="container">
             <div class="navigation ">
@@ -69,11 +69,15 @@ import Cart from '../pages/CartPage'
             </div>
             <NavLink activeClassName="activeNavLink" to="/cart">Cart</NavLink>
             
-            <NavLink activeClassName="activeNavLink" to="/profil">Profil</NavLink>            
+            <NavLink activeClassName="activeNavLink" to="/profil">Profil</NavLink>    
+            <NavLink to="/login">Login</NavLink>        
         </div>
         <Switch>
             <Route path="/profil">
                 <UserProfil />
+            </Route>
+            <Route path="/login">
+                <LoginPage/>
             </Route>
             <Route path="/product">
                 <Products />
@@ -85,10 +89,10 @@ import Cart from '../pages/CartPage'
                 <Home />
             </Route>
         </Switch>
+        
     </div>
             
-    )
-                        
+    )                       
 }
 
 

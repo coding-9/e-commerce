@@ -5,7 +5,8 @@ function Form() {
   const stateSchema = {
     fname: { value: '', error: '' },
     lname: { value: '', error: '' },
-  };// Define your validationStateSchema
+  };
+  // Define your validationStateSchema
   // Note: validationStateSchema and stateSchema property
   // should be the same in-order validation works!
   const validationStateSchema = {
@@ -19,21 +20,35 @@ function Form() {
     lname: {
       required: true,
       validator: {
-        regEx: /^[a-zA-Z]+$/,
+        regEx: /^[a-zA-Z0-9._%+-]+$/,
         error: 'Invalid password format.',
       },
     },
   };
+  // //Define the redirection when Onclick the sumbit button
+  // let history = useHistory();
+  // let location = useLocation();
+
+  // let { from } = location.state || { from: { pathname: "/public" } };
+  // let login = () => {
+  //   fakeAuth.authenticate(() => {
+  //     history.replace(from);
+  //   });
+  // };
+  
   function onSubmitForm(state) {
     alert(JSON.stringify(state, null, 2));
-  }const { state, handleOnChange, handleOnSubmit, disable } = UseForm(
+  }
+  const { state, handleOnChange, handleOnSubmit, disable } = UseForm(
     stateSchema,
     validationStateSchema,
     onSubmitForm
-  );const errorStyle = {
+  );
+  const errorStyle = {
     color: 'red',
     fontSize: '13px',
-  };return (
+  };
+  return (
     <div>
       <form onSubmit={handleOnSubmit}>
         <div>
@@ -63,4 +78,5 @@ function Form() {
       </form>
     </div>
   );
-}export default Form;
+}
+export default Form;
