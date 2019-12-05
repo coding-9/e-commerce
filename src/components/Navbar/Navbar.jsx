@@ -12,14 +12,14 @@ import Products from '../pages/ProductsPage'
 
     return (
         
-        <div class="navbar">
+        <div class="navigation">
             <NavLink activeClassName="activeNavLink" to="/">Home</NavLink>
-            <div class="dropdown">
+            <div class="drop">
                 <button to="/product" class="dropbtn">Men
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <div class=" dropdown-content row">
+                <div class="drop-content">
+                    <div class=" drop-content rows">
                         <div class="column">
                             <h3>Vêtements</h3>
                             <NavLink activeClassName="activeNavLink" to="/product/pull">Pulls & Sweats</NavLink>
@@ -38,12 +38,12 @@ import Products from '../pages/ProductsPage'
                     </div>
                 </div>
             </div> 
-            <div class="dropdown">
+            <div class="drop">
                 <button class="dropbtn">Women
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
-                    <div class=" dropdown-content row">
+                <div class="drop-content">
+                    <div class=" drop-content rows">
                         <div class="column">
                             <h3>Vêtements</h3>
                             <NavLink activeClassName="activeNavLink" to="/product/pull">Pulls & Sweats</NavLink>
