@@ -1,12 +1,12 @@
 /* Navbar container */
-.navbar {
+.navigation {
   overflow: hidden;
   background-color: white;
   font-family: Arial;
 }
 
 /* Links inside the navbar */
-.navbar a {
+.navigation a {
   float: left;
   font-size: 16px;
   color: black;
@@ -15,14 +15,14 @@
   text-decoration: none;
 }
 
-/* The dropdown container */
-.dropdown {
+/* The drop container */
+.drop {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
+/* drop button */
+.drop .dropbtn {
   font-size: 16px;
   border: none;
   outline: none;
@@ -34,8 +34,8 @@
 }
 
 
-/* Dropdown content  */
-.dropdown-content {
+/* drop content  */
+.drop-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -46,14 +46,14 @@
 }
 
 /* Mega Menu header, if needed */
-.dropdown-content .header {
+.drop-content .header {
   background: red;
   padding: 16px;
   color: white;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+/* Show the drop menu on hover */
+.drop:hover .drop-content {
   display: block;
   width: 60%;
   
@@ -83,7 +83,7 @@
 }
 
 /* Clear floats after the columns */
-.row:after {
+.rows:after {
   content: "";
   display: table;
   clear: both;
