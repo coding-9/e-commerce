@@ -4,7 +4,7 @@ import {
     Route,
     NavLink
   } from "react-router-dom";
-  
+import '../../css/navBar.css'
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
 import Products from '../pages/ProductsPage'
