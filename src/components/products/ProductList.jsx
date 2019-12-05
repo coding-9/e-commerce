@@ -17,7 +17,7 @@ const ProductList = () =>{
                 <ul className="list-unstyled productList row">
                 {products.map((product) => {
                     console.log(product)
-                   return  <li className="col-4"><ProductCard props={product} key={product.id}/></li>
+                   return  <li className="col-4"><ProductCard product={product} key={product.id}/></li>
                 })}
                 </ul>
         </div>
