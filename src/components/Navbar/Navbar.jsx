@@ -8,6 +8,7 @@ import '../../css/navBar.css'
 import Home from '../pages/HomePage'
 import UserProfil from '../pages/ProfilPage'
 import Products from '../pages/ProductsPage'
+import Cart from '../cart/CartPage'
   export default function Navbar() {
 
     return (
@@ -61,14 +62,19 @@ import Products from '../pages/ProductsPage'
                         </div>
                     </div>
                 </div>
-            </div> 
-                <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
+            </div>
+            <NavLink activeClassName="activeNavLink" to="/cart">Home</NavLink>
+            
+            <NavLink activeClassName="activeNavLink" to="/profil">User Profil</NavLink>            
             <Switch>
             <Route path="/profil">
             <UserProfil />
           </Route>
           <Route path="/product">
             <Products />
+          </Route>
+          <Route path="/cart">
+            <Cart/>
           </Route>
           <Route exact path="/">
             <Home />
