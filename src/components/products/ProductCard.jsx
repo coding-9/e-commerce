@@ -18,11 +18,11 @@ const ProductCard = ({product, addToCart}) =>{
     }
 
     const handleCart = () => {
-        let cartProduct = product
+        let cartProduct = {...product}
         cartProduct.color = currentColor
         cartProduct.size = currentSize.size
         cartProduct.id = currentSize.id
-       addToCart(cartProduct)
+       addToCart(cartProduct) 
     }
 
     return (
