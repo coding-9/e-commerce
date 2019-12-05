@@ -3,10 +3,11 @@
   overflow: hidden;
   background-color: white;
   font-family: Arial;
+  display:flex
 }
 
 /* Links inside the navbar */
-.navigation a {
+.navigation {
   float: left;
   font-size: 16px;
   color: black;
