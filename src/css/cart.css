@@ -20,11 +20,13 @@
 .quantity{
     font-size:small ;
 }
-.bin{
-    height: 50px;
-    width: 30px;
+.bin{    
     padding: 0;
     opacity: 0.4;
+}
+svg{
+    height: 50px;
+    width: 30px;
 }
 .cart-link{
     color: black;
